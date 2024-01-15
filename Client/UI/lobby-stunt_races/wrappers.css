@@ -1,0 +1,592 @@
+.lobby .lobby-bg {
+    background-image: url(./media/bg.svg);
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -2;
+}
+
+.lobby .ready {
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%) scale(var(--scale));
+    transform-origin: bottom center;
+    margin-bottom: 78px;
+
+    /* display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px; */
+}
+
+.lobby .ready h1 {
+    position: absolute;
+    left: 50%;
+    bottom: 100%;
+    transform: translateX(-50%);
+    margin-bottom: 40px;
+    white-space: nowrap;
+
+    font-family: Outfit;
+    font-size: 48px;
+    font-weight: 500;
+    line-height: 60px;
+    letter-spacing: 0.1em;
+    text-align: center;
+    text-transform: uppercase;
+    color: white;
+    transition: all 0.2s ease-in-out;
+}
+
+.lobby .ready h1.transitioning {
+    opacity: 0;
+    transform: translateX(-50%) translateY(100%);
+}
+.lobby .ready .ready-to-play {
+    position: relative;
+    height: 90px;
+    width: 344px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: visible;
+
+    font-family: Outfit;
+    font-size: 24px;
+    font-weight: 800;
+    line-height: 30px;
+    letter-spacing: 0.1em;
+    text-align: center;
+    text-transform: uppercase;
+    color: #FFF3C8;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.lobby .ready .ready-to-play .ready-bg {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+    z-index: -1;
+    transition: opacity 0.2s ease-in-out;
+}
+
+.lobby .ready .ready-to-play .ready-bg.default {
+    /* background-image: url(./media/button-ready/Ready-button-Default.svg); */
+    opacity: 1;
+}
+
+.lobby .ready .ready-to-play .ready-bg.hover,
+.lobby .ready .ready-to-play.active .ready-bg.hover {
+    /* background-image: url(./media/button-ready/Ready-button-Hover.svg); */
+    opacity: 0;
+}
+
+.lobby .ready .ready-to-play .ready-bg.matchmaking {
+    /* background-image: url(./media/button-ready/Match-button-Default.svg); */
+    opacity: 0;
+}
+
+.lobby .ready .ready-to-play .ready-bg.unavailable {
+    /* background-image: url(./media/button-ready/Error-button-Default.svg); */
+    opacity: 0;
+}
+
+.lobby .ready .ready-to-play:hover .ready-bg.default,
+.lobby .ready .ready-to-play.active .ready-bg.default {
+    opacity: 0;
+}
+
+.lobby .ready .ready-to-play:not(.active):hover .ready-bg.hover {
+    opacity: 1;
+}
+
+.lobby .ready .ready-to-play.active .ready-bg.matchmaking {
+    opacity: 1;
+}
+
+
+
+.lobby .game-modes {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    margin-left: 5vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2vh;
+}
+
+.lobby .game-modes .gamemode {
+    position: relative;
+    width: 30vh;
+    aspect-ratio: 374/216;
+    border-radius: 2.4vh;
+    cursor: pointer;
+}
+
+.lobby .game-modes .gamemode .head {
+    position: absolute;
+    bottom: -3%;
+    width: 100%;
+    height: 4.6vh;
+    border-radius: 0 0 2.8vh 2.8vh;
+    overflow: hidden;
+}
+
+.lobby .game-modes .gamemode .head .name {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    margin: 1vh 2vh;
+
+    font-family: Outfit;
+    font-size: 1.8vh;
+    font-weight: 700;
+    line-height: 2.5vh;
+    letter-spacing: 0.07em;
+    text-align: left;
+    color: #84E9FF;
+    text-transform: uppercase;
+    z-index: 3;
+    transition: color 0.2s ease-in-out;
+}
+
+.lobby .game-modes .gamemode .head .head-background {
+    position: absolute;
+    left: 50%;
+    bottom: 10%;
+    transform: translateX(-50%);
+    width: 100%;
+    height: 80%;
+    z-index: 1;
+    background-image: url(./media/mode/head-background-default.svg);
+    transition: opacity 0.2s ease-in-out;
+}
+
+.lobby .game-modes .gamemode .head .head-background.hover {
+    background-image: url(./media/mode/head-background-hover.svg);
+}
+
+.lobby .game-modes .gamemode .head .head-background.selected {
+    background-image: url(./media/mode/head-background-selected.svg);
+}
+
+.lobby .game-modes .gamemode .head .line {
+    position: absolute;
+    top: -6%;
+    left: 50%;
+    transform: translateX(-52%);
+    width: 104%;
+    aspect-ratio: 394/21;
+    z-index: 2;
+    background-image: url(./media/mode/line-default.svg);
+    background-size: cover;
+    transition: opacity 0.2s ease-in-out;
+}
+
+.lobby .game-modes .gamemode .head .line.hover {
+    background-image: url(./media/mode/line-hover.svg);
+}
+
+.lobby .game-modes .gamemode .head .line.selected {
+    transform: translateX(-50%);
+    width: 105%;
+    background-image: url(./media/mode/line-selected.svg);
+}
+
+.lobby .game-modes .gamemode .border {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 104%;
+    border-radius: 2.4vh;
+    z-index: 2;
+    transition: opacity 0.2s ease-in-out;
+}
+
+.lobby .game-modes .gamemode .border.default {
+    opacity: 1;
+}
+
+.lobby .game-modes .gamemode:hover .border.hover {
+    opacity: 1;
+}
+
+.lobby .game-modes .gamemode.selected .border.selected {
+    opacity: 1;
+}
+
+.lobby .game-modes .gamemode .image {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: calc(100% - 2.4vh);
+    height: calc(100% - 2.4vh);
+    /* padding: 1.2vh; */
+    background-image: url(./media/mode/img-border-default.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    border-radius: 1.3vh;
+    overflow: hidden;
+}
+
+.lobby .game-modes .gamemode:hover .image {
+    background-image: url(./media/mode/img-border-hover.svg);
+}
+
+.lobby .game-modes .gamemode.selected .image {
+    background-image: url(./media/mode/img-border-selected.svg);
+}
+
+.lobby .game-modes .gamemode .image img {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 98.2%;
+    height: 98.8%;
+    object-fit: cover;
+    border-radius: 1.1vh;
+    transition: transform 0.2s ease-in-out;
+    opacity: .8;
+}
+
+.lobby .game-modes .gamemode.selected .image img,
+.lobby .game-modes .gamemode:hover .image img {
+    transform: translate(-50%, -50%) scale(1.1);
+    opacity: 1;
+}
+
+.lobby .game-modes .gamemode .image>div {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+}
+
+.lobby .game-modes .gamemode .image .img-border {
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+}
+
+.lobby .game-modes .gamemode:hover .head .name,
+.lobby .game-modes .gamemode.selected .head .name {
+    color: white;
+}
+
+.lobby .game-modes .gamemode .head .line.hover,
+.lobby .game-modes .gamemode .head .line.selected {
+    opacity: 0;
+}
+
+.lobby .game-modes .gamemode:hover .head .line.default,
+.lobby .game-modes .gamemode.selected .head .line.default {
+    opacity: 0;
+}
+
+.lobby .game-modes .gamemode:hover .head .line.hover {
+    opacity: 1;
+}
+
+.lobby .game-modes .gamemode.selected .head .line.selected {
+    opacity: 1;
+}
+
+.lobby .game-modes .gamemode .head .head-background.hover,
+.lobby .game-modes .gamemode .head .head-background.selected {
+    opacity: 0;
+}
+
+.lobby .game-modes .gamemode:hover .head .head-background.default,
+.lobby .game-modes .gamemode.selected .head .head-background.default {
+    opacity: 0;
+}
+
+.lobby .game-modes .gamemode:hover .head .head-background.hover {
+    opacity: 1;
+}
+
+.lobby .game-modes .gamemode.selected .head .head-background.selected {
+    opacity: 1;
+}
+
+.lobby .game-modes .gamemode .border.hover,
+.lobby .game-modes .gamemode .border.selected {
+    transform-origin: top left;
+    transform: scale(1.02) translate(-50%, -50%);
+}
+
+.lobby .game-modes .gamemode .border.hover,
+.lobby .game-modes .gamemode .border.selected {
+    opacity: 0;
+}
+
+.lobby .game-modes .gamemode:hover .border.default,
+.lobby .game-modes .gamemode.selected .border.default {
+    opacity: 0;
+}
+
+.lobby .game-modes .gamemode:hover .border.hover {
+    opacity: 1;
+}
+
+.lobby .game-modes .gamemode.selected .border.selected {
+    opacity: 1;
+}
+
+.lobby .top-bar {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: fit-content;
+    height: fit-content;
+    margin: 26px 50px;
+
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    transform-origin: top right;
+    transform: scale(var(--scale));
+}
+
+.lobby .top-bar .level {
+    height: 100%;
+    display: flex;
+    justify-content: end;
+    align-content: end;
+    text-align: center;
+    font-family: Outfit;
+    font-size: 36px;
+    font-weight: 600;
+    line-height: 33px;
+    letter-spacing: 0em;
+    text-align: end;
+    color: white;
+    margin: 0;
+    transform: translateY(5px);
+}
+
+.lobby .top-bar .level span {
+    margin: 0;
+    font-family: Outfit;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 40px;
+    letter-spacing: 0em;
+    text-align: end;
+}
+
+.lobby .top-bar .xp {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    gap: 6px;
+    margin-left: 20px;
+}
+
+.lobby .top-bar .xp .name {
+    font-family: Outfit;
+    font-size: 20px;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    text-align: left;
+    color: #FFFFFFB2;
+    margin: 0;
+}
+
+.lobby .top-bar .xp .xp-bar {
+    position: relative;
+    width: 210px;
+    height: 6px;
+    background-color: #0000004D;
+    border-radius: 7px;
+}
+
+.lobby .top-bar .xp .xp-bar .fill {
+    border-radius: 7px;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 70%;
+    height: 100%;
+    /* #FFEF9B, #FFDB21, #FFA800 */
+    background: linear-gradient(-90deg, #FFEF9B 0%, #FFDB21 50%, #FFA800 100%);
+    box-shadow: 0px 0px 10px 0px #FF7A00;
+    transition: width 1s ease-in-out;
+
+}
+
+.lobby .top-bar .xp .xp-bar .fill-light {
+    position: absolute;
+    right: 1px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 4px;
+    height: 6px;
+    z-index: 1;
+}
+
+.lobby .top-bar button {
+    position: relative;
+    margin-left: 30px;
+    cursor: pointer;
+}
+
+.lobby .top-bar button svg {
+    fill: #FFFFFF;
+    opacity: .7;
+    transform: translateY(3px);
+    transition: opacity 0.2s ease-in-out;
+}
+
+.lobby .top-bar button:hover svg {
+    opacity: 1;
+}
+
+.lobby .gamemode-description {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    margin: 150px 40px;
+    width: 380px;
+    height: 150px;
+
+    font-family: Outfit;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 23px;
+    letter-spacing: 0.04em;
+    text-align: center;
+    padding: 10px;
+
+    color: white;
+    pointer-events: none;
+    user-select: none;
+    
+    background-color: rgba(15, 15, 15, 0.8);
+    border-radius: 20px;
+
+    transform-origin: bottom right;
+    transform: scale(var(--scale));
+}
+
+.lobby .gamemode-description .name {
+    color: #FFC24C;
+    font-weight: 700;
+}
+
+.lobby .hotkeys {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    margin: 50px;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    gap: 55px;
+    pointer-events: none;
+    user-select: none;
+    transform-origin: bottom right;
+    transform: scale(var(--scale));
+}
+
+.lobby .hotkeys .hotkey {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+}
+
+.lobby .hotkeys .hotkey .key {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-family: Outfit;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 18px;
+    letter-spacing: 0.04em;
+    text-align: center;
+    color: #000000;
+    background-color: #FFFFFF;
+    padding: 5px;
+    border-radius: 10px;
+    text-transform: uppercase;
+}
+
+.lobby .hotkeys .hotkey .name {
+    font-family: Outfit;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 20px;
+    letter-spacing: 0.1em;
+    text-align: left;
+    color: white;
+    text-transform: uppercase;
+}
+
+.lobby .back {
+    position: absolute;
+    left: 0;
+    top: 0;
+    margin: 44px 50px;
+    cursor: pointer;
+    transform-origin: top left;
+    transform: scale(var(--scale));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.lobby .back svg {
+    fill: #FFFFFF;
+    opacity: .7;
+    transform: translateY(3px);
+    transition: opacity 0.2s ease-in-out;
+    margin-bottom: 5px;
+}
+
+.lobby .back:hover svg {
+    opacity: 1;
+}
+
+.lobby .back p {
+    margin: 0;
+    font-family: Outfit;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 16px;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    text-align: left;
+    color: white;
+    opacity: .7;
+    transition: opacity 0.2s ease-in-out;
+}
+
+.lobby .back:hover p {
+    opacity: 1;
+}

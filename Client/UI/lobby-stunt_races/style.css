@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+@font-face {
+  font-family: "Intro Bold Italic";
+  src: url("./media/Intro\ Bold\ Italic.otf");
+}
+/* import Intro Regular Italic.otf */
+@font-face {
+  font-family: "Intro Regular Italic";
+  src: url("./media/Intro\ Regular\ Italic.otf");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+  box-shadow: none;
+  text-decoration: none;
+  color: inherit;
+  font-weight: inherit;
+  font-style: inherit;
+  font-family: inherit;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+*:active,
+*:focus {
+  outline: 0;
+}
+
+html {
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background: transparent;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column nowrap;
+  font-family: "Inter", serif;
+  --scale: 1;
+}
+
+.screen {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column nowrap;
+  z-index: 1;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.screen.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+
+@media screen and (min-height: 1440px) {
+  body {
+      --scale: 1.6;
+  }
+}
+@media screen and (min-height: 2000px) {
+  body {
+    --scale: 1.8;
+  }
+}
+@media screen and (max-width: 2020px) {
+  body {
+    --scale: 1;
+  }
+}
+@media screen and (max-width: 1520px) {
+  body {
+    --scale: 0.8;
+  }
+}
+@media screen and (max-width: 1324px) {
+  body {
+    --scale: 0.7;
+  }
+}
+@media screen and (max-width: 1124px) {
+  body {
+    --scale: 0.6;
+  }
+}
+@media screen and (max-width: 1024px) {
+  body {
+    --scale: 0.5;
+  }
+}
+@media screen and (max-width: 900px) {
+  body {
+    --scale: 0.4;
+  }
+}
+@media screen and (max-width: 800px) {
+  body {
+    --scale: 0.3;
+  }
+}

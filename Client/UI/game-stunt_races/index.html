@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="wrappers.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet" />
+</head>
+
+<body class="">
+
+  <div class="screen hidden">
+
+    <div class="game wrapper">
+
+      <div class="progress">
+        <h1 class="time">00:00.000</h1>
+        <div class="decoration"></div>
+        <div>
+          <h1 class="percentage">0%</h1>
+          <p>progress</p>
+        </div>
+      </div>
+
+      <div class="position">
+        <div>
+          <h1 id="position">0</h1>
+          <p>/<span>0</span></p>
+        </div>
+        <div class="decoration"></div>
+        <div class="shadow"></div>
+      </div>
+
+      <div class="speedometer">
+        <h1><span>0</span>00</h1>
+        <img src="./media/speed-shadow.png" alt="" class="speed-shadow">
+        <div class="gear">
+          <span>N</span>
+          <img class="needle" src="./media/speedometer-needle.png" alt="">
+        </div>
+        <div class="numbers">
+          <span>
+            <p>0</p>
+          </span>
+          <span>
+            <p>1</p>
+          </span>
+          <span>
+            <p>2</p>
+          </span>
+          <span>
+            <p>3</p>
+          </span>
+          <span>
+            <p>4</p>
+          </span>
+          <span>
+            <p>5</p>
+          </span>
+          <span>
+            <p>6</p>
+          </span>
+          <span>
+            <p>7</p>
+          </span>
+        </div>
+        <div class="bg"></div>
+      </div>
+
+      <div class="timer">
+        <p>3</p>
+        <img src="./media/counter-bg.png" alt="" class="timer-detail">
+        <img src="./media/counter-outline.png" alt="" class="timer-detail">
+        <img src="./media/counter-shadow.png" alt="" class="timer-detail">
+      </div>
+
+      <div class="hotkeys">
+        <span class="hotkey">
+          <p>R</p>
+          <h1>Respawn</h1>
+        </span>
+      </div>
+
+      <div class="game-lights"></div>
+      <img src="./media/corner-shadow.png" alt="" class="corner-shadow l">
+      <img src="./media/corner-shadow.png" alt="" class="corner-shadow r">
+      <div class="bg"></div>
+      <div class="black-shadows"></div>
+    </div>
+
+  </div>
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"
+    integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.js"
+    integrity="sha512-nO7wgHUoWPYGCNriyGzcFwPSF+bPDOR+NvtOYy2wMcWkrnCNPKBcFEkU80XIN14UVja0Gdnff9EmydyLlOL7mQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,55 @@
+body {
+    font-family: Tahoma, sans-serif;
+    font-size: 14px;
+    margin: 0px;
+    padding: 0px;
+    margin-bottom: 20px;
+    border-radius: 25px;
+}
+
+table {
+    background-color: rgb(25,25,25);
+    position: absolute;
+    left: 25%;
+    top: 35%;
+    width: 30%;
+    height: 5%;
+    border-radius: 25px;
+}
+
+td {
+    position: relative;
+    height:10%;
+}
+
+img {
+    height: 100px;
+}
+    
+
+.position {
+    background-color: rgb(245,245,245);  
+    color: black; 
+    width: 7%;
+    font-size: 500%;
+    font-family: Arial, Helvetica, sans-serif;
+    border-radius: 25px;
+    text-align: center;
+
+}
+.name {
+    background-color: rgb(0,0,0);  
+    opacity: 0.5; 
+    color: white;
+    width: 30%;
+    font-size: 300%;
+    text-align: center;
+    border-radius: 25px;
+}
+.profile {
+    background-color: rgb(0,0,0);   
+    color: white;
+    width: 0%;
+    border-radius: 25px;
+}
+

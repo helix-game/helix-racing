@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
+    <script src="index.js"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Document</title>
+</head>
+<body>
+    <div class="blueprint">
+        <div class="player">
+            <p id="playerPosition"></p>
+            <h1 id="playerName"></h1>
+        </div>
+    </div>
+
+
+    <style>
+        @font-face {
+            font-family: "Intro Black Italic";
+            src: url(./media/Intro_Black_Italic.otf);
+        }
+        @font-face {
+            font-family: "Intro Bold Italic";
+            src: url(./media/Intro_Bold_Italic.otf);
+        }
+        body{
+            margin: 0;
+            padding: 0;
+        }
+        .blueprint{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) scale(10);
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: fit-content;
+            height: 38px;
+            background: rgba(0, 0, 0, 0.8);
+            border: 1px solid rgba(255, 255, 255, 0.35);
+            border-radius: 10px;
+            transition: opacity .3s;
+            opacity: 1;
+        }
+        .blueprint .player{
+            width: 100%;
+            padding: 0 7px;
+            display: flex;
+            justify-content: start;
+            align-items: center;
+        }
+        .blueprint .player p{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 24px;
+            height: 24px;
+
+            font-family: 'Intro Black Italic';
+            font-style: italic;
+            font-weight: 900;
+            font-size: 16px;
+            line-height: 16px;
+            /* identical to box height */
+
+            display: flex;
+            align-items: center;
+            text-align: center;
+            letter-spacing: 0.04em;
+
+            background: #FFFFFF;
+            border: 1px solid rgba(0, 0, 0, 0.25);
+            border-radius: 6px;
+            color: #000000;
+
+            text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+        }
+        .blueprint .player h1{
+            font-family: 'Intro Bold Italic';
+            font-style: italic;
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 16px;
+            /* identical to box height */
+
+            display: flex;
+            align-items: center;
+            letter-spacing: 0.04em;
+            margin-left: 20px;
+
+            color: #FFFFFF;
+
+            text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+        }
+        .blueprint::after{
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            margin-top: 35px;
+            width: 26px;
+            height: 20px;
+            background-image: url(./media/triangle.png);
+
+        }
+
+    </style>
+
+</body>
+</html>

@@ -1,0 +1,596 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  font-size: 14px;
+  overflow: hidden;
+
+}
+.menu {
+  width: 100%;
+  height: 580px;
+  background: url("../images/v484_213.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  opacity: 1;
+  position: absolute;
+  margin-top: 8%;
+  margin-left: 25%;
+  overflow: hidden;
+}
+.topbar {
+  width: 100%;
+  height: 51px;
+  background: url("../images/v481_105.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  opacity: 1;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  overflow: hidden;
+}
+.cars {
+  width: 256px;
+  height: 51px;
+  background: rgba(242,240,240,1);
+  opacity: 1;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  overflow: hidden;
+
+  color: rgba(4,35,31,1);
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  font-family: IBM Plex Sans Condensed;
+  font-weight: bolder;
+  font-size: 35px;
+  opacity: 1;
+  text-align: center;
+}
+
+.topbar div:hover{
+  background: rgb(159, 216, 206);
+  color: rgba(242,240,240,1);
+  /*color: rgba(4,35,31,1);*/
+
+}
+
+.topbar #selected {
+  background: rgba(0,217,178,1);
+  color: rgba(242,240,240,1);
+}
+.quickplay {
+  width: 256px;
+  height: 51px;
+  background: rgba(242,240,240,1);
+  opacity: 1;
+  position: absolute;
+  top: 0px;
+  left: 257px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  overflow: hidden;
+
+  color: rgba(4,35,31,1);
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  font-family: IBM Plex Sans Condensed;
+  font-weight: bolder;
+  font-size: 35px;
+  opacity: 1;
+  text-align: center;
+}
+
+
+.v481_106 {
+  width: 230px;
+  color: rgba(4,35,31,1);
+  position: absolute;
+  top: 0px;
+  left: 270px;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  font-family: IBM Plex Sans Condensed;
+  font-weight: SemiBold;
+  font-size: 35px;
+  opacity: 1;
+  text-align: center;
+}
+
+
+.online {
+  width: 256px;
+  height: 51px;
+  background: rgba(242,240,240,1);
+  opacity: 1;
+  position: absolute;
+  top: 0px;
+  left: 515px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  overflow: hidden;
+
+  color: rgba(4,35,31,1);
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  font-family: IBM Plex Sans Condensed;
+  font-weight: bolder;
+  font-size: 35px;
+  opacity: 1;
+  text-align: center;
+}
+
+
+.store {
+  width: 256px;
+  height: 51px;
+  background: rgba(242,240,240,1);
+  opacity: 1;
+  position: absolute;
+  top: 0px;
+  left: 772px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  overflow: hidden;
+
+  color: rgba(4,35,31,1);
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  font-family: IBM Plex Sans Condensed;
+  font-weight: bolder;
+  font-size: 35px;
+  opacity: 1;
+  text-align: center;
+}
+
+
+.v481_111 {
+  width: 230px;
+  color: rgba(4,35,31,1);
+  position: absolute;
+  top: 0px;
+  left: 785px;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  font-family: IBM Plex Sans Condensed;
+  font-weight: SemiBold;
+  font-size: 35px;
+  opacity: 1;
+  text-align: center;
+}
+.selections {
+  width: 100%;
+  height: 514px;
+  background: url("../images/v484_214.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  opacity: 1;
+  position: absolute;
+  top: 65px;
+  left: 0px;
+  overflow: hidden;
+}
+.races {
+  width: 509px;
+  height: 514px;
+  background: url("../images/v481_112.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  opacity: 1;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  overflow: hidden;
+}
+.races .pic {
+  width: 509px;
+  height: 514px;
+  background: url("../images/v481_123.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  opacity: 1;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  overflow: hidden;
+  transition: transform .2s;
+}
+
+
+
+.v481_114 {
+  width: 509px;
+  height: 203px;
+  background: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,1));
+  opacity: 1;
+  position: absolute;
+  top: 310px;
+  left: 0px;
+  overflow: hidden;
+}
+.v481_115 {
+  width: 67px;
+  height: 68px;
+  background: url("../images/v481_115.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  opacity: 1;
+  position: absolute;
+  top: 394px;
+  left: 16px;
+  overflow: hidden;
+}
+.v481_116 {
+  width: 67px;
+  height: 68px;
+  background: rgba(0,217,178,1);
+  opacity: 1;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  overflow: hidden;
+}
+.v481_117 {
+  width: 33px;
+  height: 41px;
+  opacity: 1;
+  position: absolute;
+  top: 13px;
+  left: 18px;
+}
+.v481_118 {
+  width: 336px;
+  color: rgba(255,255,255,1);
+  position: absolute;
+  top: 400px;
+  left: 101px;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  font-family: IBM Plex Sans Condensed;
+  font-weight: SemiBold;
+  font-size: 40px;
+  opacity: 1;
+  text-align: left;
+}
+.gamemodes {
+  width: 106px;
+  height: 29px;
+  background: url("../images/v484_212.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  opacity: 1;
+  position: absolute;
+  top: 469px;
+  left: 216px;
+}
+.gamemodes .trackrace {
+  width: 29px;
+  height: 29px;
+  opacity: 1;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  border-radius: 50%;
+
+  outline: #FFFF solid 2px;
+
+}
+.gamemodes .sumo {
+  width: 29px;
+  height: 29px;
+  background: url("../images/v484_211.png");
+  opacity: 1;
+  position: absolute;
+  top: 0px;
+  left: 77px;
+  border-radius: 50%;
+
+  outline: #FFFF solid 2px;
+
+}
+.gamemodes .face2face {
+  width: 29px;
+  height: 29px;
+  background: url("../images/v484_210.png");
+  opacity: 1;
+  position: absolute;
+  top: 0px;
+  left: 38px;
+  border-radius: 50%;
+  
+  outline: #FFFF solid 2px;
+}
+
+.gamemodes div:hover{
+
+  background: rgb(216, 216, 216);
+
+}
+
+.gamemodes #selected {
+
+  background: rgba(255,255,255,1);
+
+}
+
+.browse {
+  width: 512px;
+  height: 256px;
+  background: url("../images/v481_139.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  opacity: 1;
+  position: absolute;
+  top: 0px;
+  left: 516px;
+  overflow: hidden;
+}
+.browse .pic {
+  width: 512px;
+  height: 255px;
+  background: url("../images/v481_140.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  opacity: 1;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  overflow: hidden;
+
+  transition: transform .2s;
+
+}
+
+
+
+.v481_141 {
+  width: 512px;
+  height: 129px;
+  background: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,1));
+  opacity: 1;
+  position: absolute;
+  top: 127px;
+  left: 0px;
+}
+.v481_142 {
+  width: 68px;
+  height: 68px;
+  background: url("../images/v481_142.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  opacity: 1;
+  position: absolute;
+  top: 149px;
+  left: 11px;
+  overflow: hidden;
+}
+.v481_143 {
+  width: 68px;
+  height: 68px;
+  background: rgba(0,217,178,1);
+  opacity: 1;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  overflow: hidden;
+}
+.browse .icon {
+  width: 39px;
+  height: 40px;
+  opacity: 1;
+  position: absolute;
+  top: 13px;
+  left: 14px;
+}
+.v481_145 {
+  width: 338px;
+  color: rgba(255,255,255,1);
+  position: absolute;
+  top: 155px;
+  left: 96px;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  font-family: IBM Plex Sans Condensed;
+  font-weight: SemiBold;
+  font-size: 40px;
+  opacity: 1;
+  text-align: left;
+}
+.host {
+  width: 256px;
+  height: 255px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  opacity: 1;
+  position: absolute;
+  top: 258px;
+  left: 772px;
+  overflow: hidden;
+}
+.host .pic {
+  width: 256px;
+  height: 255px;
+  background: url("../images/v481_148.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  opacity: 1;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  overflow: hidden;
+
+  transition: transform .2s;
+}
+
+.pic:hover{
+  transform: scale(1.05); 
+}
+
+.host .fade {
+  width: 256px;
+  height: 129px;
+  background: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,1));
+  opacity: 1;
+  position: absolute;
+  top: 126px;
+  left: 0px;
+  overflow: hidden;
+}
+.host .button {
+  width: 68px;
+  height: 68px;
+  background: url("../images/v481_150.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  opacity: 1;
+  position: absolute;
+  top: 149px;
+  left: 11px;
+  overflow: hidden;
+}
+.host .button .button_bg {
+  width: 68px;
+  height: 68px;
+  background: rgba(0,217,178,1);
+  opacity: 1;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  overflow: hidden;
+}
+.host .button .icon {
+  width: 38px;
+  height: 38px;
+  opacity: 1;
+  position: absolute;
+  top: 14px;
+  left: 15px;
+}
+.host .text {
+  width: 169px;
+  color: rgba(255,255,255,1);
+  position: absolute;
+  top: 165px;
+  left: 96px;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  font-family: IBM Plex Sans Condensed;
+  font-weight: SemiBold;
+  font-size: 30px;
+  opacity: 1;
+  text-align: left;
+}
+
+
+
+
+/**/
+
+
+
+
+.random {
+  width: 256px;
+  height: 255px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  opacity: 1;
+  position: absolute;
+  top: 258px;
+  left: 515px;
+  overflow: hidden;
+}
+.random .pic {
+  width: 256px;
+  height: 255px;
+  background: url("../images/dice.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  opacity: 1;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  overflow: hidden;
+
+  transition: transform .2s;
+}
+
+
+.random .fade {
+  width: 256px;
+  height: 129px;
+  background: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,1));
+  opacity: 1;
+  position: absolute;
+  top: 126px;
+  left: 0px;
+  overflow: hidden;
+}
+.random .button {
+  width: 68px;
+  height: 68px;
+  background: url("../images/v481_150.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  opacity: 1;
+  position: absolute;
+  top: 149px;
+  left: 11px;
+  overflow: hidden;
+}
+.random .button .button_bg {
+  width: 68px;
+  height: 68px;
+  background: rgba(0,217,178,1);
+  opacity: 1;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  overflow: hidden;
+}
+.random .button .icon {
+  width: 38px;
+  height: 38px;
+  opacity: 1;
+  position: absolute;
+  top: 14px;
+  left: 15px;
+}
+.random .text {
+  width: 169px;
+  color: rgba(255,255,255,1);
+  position: absolute;
+  top: 165px;
+  left: 96px;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  font-family: IBM Plex Sans Condensed;
+  font-weight: SemiBold;
+  font-size: 30px;
+  opacity: 1;
+  text-align: left;
+}
+
+

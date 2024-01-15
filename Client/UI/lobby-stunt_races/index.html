@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="wrappers.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet" />
+</head>
+
+<body class="">
+
+  <div class="screen hidden">
+
+    <div class="lobby wrapper">
+
+      <div class="game-modes">
+        <div class="gamemode selected" data-mode="trackrace">
+          <div class="head">
+            <div class="line default"></div>
+            <div class="line hover"></div>
+            <div class="line selected"></div>
+            <p class="name">racing</p>
+            <div class="head-background default"></div>
+            <div class="head-background hover"></div>
+            <div class="head-background selected"></div>
+          </div>
+          <img src="./media/mode/border-default.svg" alt="" class="border default">
+          <img src="./media/mode/border-hover.svg" alt="" class="border hover">
+          <img src="./media/mode/border-selected.svg" alt="" class="border selected">
+          <div class="image">
+            <img src="./media/mode/racing.png" alt="">
+            <div class="img-border default"></div>
+            <div class="img-border hover"></div>
+            <div class="img-border selected"></div>
+          </div>
+        </div>
+        <!--
+        <div class="gamemode" data-mode="face2face">
+          <div class="head">
+            <div class="line default"></div>
+            <div class="line hover"></div>
+            <div class="line selected"></div>
+            <p class="name">face to face</p>
+            <div class="head-background default"></div>
+            <div class="head-background hover"></div>
+            <div class="head-background selected"></div>
+          </div>
+          <img src="./media/mode/border-default.svg" alt="" class="border default">
+          <img src="./media/mode/border-hover.svg" alt="" class="border hover">
+          <img src="./media/mode/border-selected.svg" alt="" class="border selected">
+          <div class="image">
+            <img src="./media/mode/face-to-face.png" alt="">
+            <div class="img-border default"></div>
+            <div class="img-border hover"></div>
+            <div class="img-border selected"></div>
+          </div>
+        </div>
+      -->
+        <!--
+        <div class="gamemode" data-mode="soccer">
+          <div class="head">
+            <div class="line default"></div>
+            <div class="line hover"></div>
+            <div class="line selected"></div>
+            <p class="name">soccer</p>
+            <div class="head-background default"></div>
+            <div class="head-background hover"></div>
+            <div class="head-background selected"></div>
+          </div>
+          <img src="./media/mode/border-default.svg" alt="" class="border default">
+          <img src="./media/mode/border-hover.svg" alt="" class="border hover">
+          <img src="./media/mode/border-selected.svg" alt="" class="border selected">
+          <div class="image">
+            <img src="./media/mode/soccer.png" alt="">
+            <div class="img-border default"></div>
+            <div class="img-border hover"></div>
+            <div class="img-border selected"></div>
+          </div>
+        </div>
+        -->
+        <div class="gamemode" data-mode="sumo">
+          <div class="head">
+            <div class="line default"></div>
+            <div class="line hover"></div>
+            <div class="line selected"></div>
+            <p class="name">sumo</p>
+            <div class="head-background default"></div>
+            <div class="head-background hover"></div>
+            <div class="head-background selected"></div>
+          </div>
+          <img src="./media/mode/border-default.svg" alt="" class="border default">
+          <img src="./media/mode/border-hover.svg" alt="" class="border hover">
+          <img src="./media/mode/border-selected.svg" alt="" class="border selected">
+          <div class="image">
+            <img src="./media/mode/sumo.png" alt="">
+            <div class="img-border default"></div>
+            <div class="img-border hover"></div>
+            <div class="img-border selected"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="ready">
+        <h1>racing mode</h1>
+        <button class="ready-to-play">
+          <p>ready to play</p>
+          <img class="default ready-bg" src="./media/button-ready/Ready-button-Default.svg" alt="">
+          <img class="hover ready-bg" src="./media/button-ready/Ready-button-Hover.svg" alt="">
+          <img class="matchmaking ready-bg" src="./media/button-ready/Match-button-Default.svg" alt="">
+          <img class="unavailable ready-bg" src="./media/button-ready/Error-button-Default.svg" alt="">
+        </button>
+      </div>
+
+      <div class="top-bar">
+        <p class="level"> <span></span></p>
+        <div class="xp">
+          <p class="name"></p>
+          <div class="xp-bar">
+            <span class="fill">
+              <svg class="fill-light" width="12" height="14" viewBox="0 0 12 14" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <g filter="url(#filter0_df_866_414)">
+                  <ellipse cx="6" cy="7" rx="2" ry="3" fill="white" />
+                </g>
+                <defs>
+                  <filter id="filter0_df_866_414" x="0" y="0" width="12" height="14" filterUnits="userSpaceOnUse"
+                    color-interpolation-filters="sRGB">
+                    <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                    <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                      result="hardAlpha" />
+                    <feOffset />
+                    <feGaussianBlur stdDeviation="2" />
+                    <feComposite in2="hardAlpha" operator="out" />
+                    <feColorMatrix type="matrix" values="0 0 0 0 1 0 0 0 0 0.84 0 0 0 0 0 0 0 0 1 0" />
+                    <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_866_414" />
+                    <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_866_414" result="shape" />
+                    <feGaussianBlur stdDeviation="1" result="effect2_foregroundBlur_866_414" />
+                  </filter>
+                </defs>
+              </svg>
+
+            </span>
+          </div>
+        </div>
+        <button class="sound">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M14.6142 23.764V21.0079C16.5748 20.4253 18.1542 19.3049 19.3524 17.6468C20.5506 15.9886 21.1497 14.1064 21.1497 12.0001C21.1497 9.8938 20.5506 8.01158 19.3524 6.35343C18.1542 4.69528 16.5748 3.57491 14.6142 2.99232V0.236206C17.3155 0.863613 19.5158 2.2699 21.215 4.45507C22.9142 6.64024 23.7639 9.15525 23.7639 12.0001C23.7639 14.8458 22.9142 17.3613 21.215 19.5465C19.5158 21.7316 17.3155 23.1375 14.6142 23.764ZM0.236084 16.067V8.00037H5.46448L12 1.27815V22.7893L5.46448 16.067H0.236084ZM14.6142 17.4115V6.58871C15.6381 7.08167 16.4389 7.82111 17.0166 8.80704C17.5944 9.79297 17.8828 10.8685 17.8819 12.0337C17.8819 13.1765 17.593 14.2355 17.0153 15.2106C16.4376 16.1858 15.6372 16.9194 14.6142 17.4115Z" />
+          </svg>
+        </button>
+        <button class="settings">
+          <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M9.76575 24.8333L9.15325 20.9746C8.76534 20.8317 8.357 20.6377 7.92825 20.3927C7.4995 20.1477 7.12179 19.8925 6.79513 19.6271L3.18138 21.2808L0.333252 16.2583L3.64075 13.839C3.59992 13.6552 3.5744 13.4459 3.56419 13.2112C3.55398 12.9764 3.54888 12.7671 3.54888 12.5833C3.54888 12.3996 3.55398 12.1903 3.56419 11.9555C3.5744 11.7207 3.59992 11.5115 3.64075 11.3277L0.333252 8.90834L3.18138 3.88584L6.79513 5.53959C7.12179 5.27418 7.4995 5.01897 7.92825 4.77397C8.357 4.52897 8.76534 4.34522 9.15325 4.22272L9.76575 0.333344H15.4008L16.0133 4.19209C16.4012 4.33501 16.8146 4.52386 17.2536 4.75866C17.6925 4.99345 18.0651 5.25376 18.3714 5.53959L21.9851 3.88584L24.8333 8.90834L21.5258 11.2665C21.5666 11.4706 21.5921 11.6901 21.6023 11.9249C21.6125 12.1597 21.6176 12.3792 21.6176 12.5833C21.6176 12.7875 21.6125 13.0019 21.6023 13.2265C21.5921 13.4511 21.5666 13.6654 21.5258 13.8696L24.8333 16.2583L21.9851 21.2808L18.3714 19.6271C18.0447 19.8925 17.6721 20.1528 17.2536 20.408C16.835 20.6632 16.4216 20.8521 16.0133 20.9746L15.4008 24.8333H9.76575ZM12.5833 16.5646C13.6858 16.5646 14.6249 16.1767 15.4008 15.4008C16.1766 14.625 16.5645 13.6858 16.5645 12.5833C16.5645 11.4808 16.1766 10.5417 15.4008 9.76584C14.6249 8.99001 13.6858 8.60209 12.5833 8.60209C11.4808 8.60209 10.5416 8.99001 9.76575 9.76584C8.98992 10.5417 8.602 11.4808 8.602 12.5833C8.602 13.6858 8.98992 14.625 9.76575 15.4008C10.5416 16.1767 11.4808 16.5646 12.5833 16.5646Z" />
+          </svg>
+        </button>
+      </div>
+
+      <p class="gamemode-description">
+        <span class="name">Face to Face Mode</span> is the ultimate challenge for thrill seekers. In
+        this mode, you can race against another player. You can test your nerves and prove your dominance.
+      </p>
+
+      <div class="hotkeys">
+        <div class="hotkey">
+          <p class="key">
+            tab
+          </p>
+          <p class="name">option</p>
+        </div>
+        <div class="hotkey">
+          <p class="key">
+            esc
+          </p>
+          <p class="name">exit</p>
+        </div>
+      </div>
+
+      <button class="back">
+        <svg width="10" height="16" viewBox="0 0 10 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M0 8.00001L7.32843 15.3284L9.16054 13.4963L3.66418 7.99997L9.1605 2.50365L7.32839 0.671539L0 8.00001Z" />
+        </svg>
+        <p>back</p>
+      </button>
+
+      <div class="lobby-bg"></div>
+    </div>
+
+  </div>
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"
+    integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.js"
+    integrity="sha512-nO7wgHUoWPYGCNriyGzcFwPSF+bPDOR+NvtOYy2wMcWkrnCNPKBcFEkU80XIN14UVja0Gdnff9EmydyLlOL7mQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>
