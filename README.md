@@ -1,3 +1,3 @@
 # helix-racing
 
-![Image](image.png)
+![Image](./Assets/image.png)
