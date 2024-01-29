@@ -18,48 +18,60 @@ hud.main_hud = nil
 
 
 last_pos = false
-function Calculate_MPH()
 
-    if Client.GetLocalPlayer():GetControlledCharacter() then 
-    local char = Client.GetLocalPlayer():GetControlledCharacter()
+function Calculate_MPH(char, vehicle)
+    if vehicle:GetRPM() ~= 0 then
+        local current_pos = char:GetLocation()
 
-    if char then
-        local car = char:GetVehicle()
-        --print(car:GetRPM())
-        if car:GetRPM() ~= 0 then
-            local current_pos = char:GetLocation()
+        if last_pos and vehicle:GetVelocity():IsZero() == false then
+            local distance = current_pos:Distance(last_pos)
+            local speed = distance / (time) * 10
+            local mph = HELIXMath.Round((speed * 2.23694)) -- convert "speed" to actual mph - estimation is not perfect
 
-            --print(last_pos,car:GetVelocity())
-            if last_pos and car:GetVelocity():IsZero() == false then
-                --print("this!")
+            local tab = {
+                action = "show",
+                isMetric = false, --false,
+                speed = mph,
+                rpm = vehicle:GetRPM(),
+                gear = vehicle:GetGear()
+            }
 
-                local distance = current_pos:Distance(last_pos)
-                local speed = distance / (time) * 10
-                local mph = HELIXMath.Round((speed * 2.23694)) -- convert "speed" to actual mph - estimation is not perfect
+            --print(vehicle:GetRPM())
 
-                local tab = {
-                    action = "show",
-                    isMetric = false, --false,
-                    speed = mph,
-                    rpm = car:GetRPM(),
-                    gear = car:GetGear()
-                }
-                --print(car:GetRPM())
-                if car:GetRPM() > 1200 and speed <= 250 then
-                    hud.main_hud:CallEvent("SetDashboard", car:GetRPM(),mph,car:GetGear())
-                end
-                --speedometer = hud.speedometer
-                --speedometer:CallEvent("Speedometer", tab)
-                --Events.CallRemote("speedFOV",mph,car:GetRPM()/60)
-                --end
+            if vehicle:GetRPM() > 1200 and speed <= 250 then
+                hud.main_hud:CallEvent("SetDashboard", vehicle:GetRPM(), mph, vehicle:GetGear())
             end
 
-            last_pos = current_pos
+            --speedometer = hud.speedometer
+            --speedometer:CallEvent("Speedometer", tab)
+            --Events.CallRemote("speedFOV",mph,vehicle:GetRPM()/60)
+            --end
         end
+
+        last_pos = current_pos
     end
 end
+
+
+function CheckVehicle()
+    local success, e = pcall(function()
+        local player = Client.GetLocalPlayer()
+        local char = player:GetControlledCharacter()
+        local vehicle = char:GetVehicle()
+        local rpm = vehicle:GetRPM()
+    end)
+
+
+    if success then
+        local player = Client.GetLocalPlayer()
+        local char = player:GetControlledCharacter()
+        local vehicle = char:GetVehicle()
+
+        Calculate_MPH(char, vehicle)
+    end
 end
-local mph_timer = Timer.SetInterval(Calculate_MPH, time)
+local mph_timer = Timer.SetInterval(CheckVehicle, time)
+
 
 
 
