@@ -3,11 +3,17 @@ const buttonReady = $('.lobby .ready button.ready-to-play')
 
 let selectedGamemode = "trackrace"
 
+$(".top-bar").hide()
+
 gamemodes.on('click', function () {
+    console.log(this.id)
+    if (this.id != "greyscale") {
     gamemodes.removeClass('selected')
     $(this).addClass('selected')
     $('.lobby .ready h1').text($(this).find('.name').text() + " mode")
     selectedGamemode = $(this).attr('data-mode')
+    
+    }
 })
 
 buttonReady.on('click', function () {

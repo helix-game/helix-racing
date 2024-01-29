@@ -114,6 +114,13 @@
     opacity: 1;
 }
 
+#greyscale {
+
+    filter: grayscale(100%);
+
+
+}
+
 
 
 .lobby .game-modes {
@@ -136,6 +143,7 @@
     aspect-ratio: 374/216;
     border-radius: 2.4vh;
     cursor: pointer;
+
 }
 
 .lobby .game-modes .gamemode .head {
